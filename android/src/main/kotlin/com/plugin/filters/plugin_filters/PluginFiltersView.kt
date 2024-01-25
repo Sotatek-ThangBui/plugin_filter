@@ -448,7 +448,7 @@ class PluginFiltersView(
         createAndStartCamera()
     }
 
-    open fun setVideoSize(width: Int, height: Int) {
+    private fun setVideoSize(width: Int, height: Int) {
         mVideoWidth = width
         mVideoHeight = height
         if (mRenderThread != null) {
@@ -1664,7 +1664,7 @@ class PluginFiltersView(
         }
     }
 
-    override fun getView(): View? {
+    override fun getView(): View {
         return parentView
     }
 
