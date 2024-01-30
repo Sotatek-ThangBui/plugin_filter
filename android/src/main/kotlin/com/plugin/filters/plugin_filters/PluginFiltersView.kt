@@ -1053,7 +1053,7 @@ class PluginFiltersView(
                 mDepthBuffer = -1
             }
             if (mFullScreen != null) {
-                mFullScreen!!.release(false) // TODO: should be "true"; must ensure mEglCore current
+                mFullScreen!!.release(true) // TODO: should be "true"; must ensure mEglCore current
                 mFullScreen = null
             }
             GlUtil.checkGlError("releaseGl done")
@@ -1680,7 +1680,7 @@ class PluginFiltersView(
                 isFrontCamera = !isFrontCamera
                 removeSurface()
                 cameraSource?.stop()
-                setupObserver()
+//                setupObserver()
             }
 
             "setFilter" -> {
